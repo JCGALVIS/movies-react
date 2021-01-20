@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import "./card.scss";
 import { urlImage } from "../../constants/constants";
 
-export const Card = ({ image, title, date }) => {
+export const Card = ({ id, image, title, date }) => {
 
   return (
     <div className="card">
@@ -16,7 +16,7 @@ export const Card = ({ image, title, date }) => {
         <h3>{title}</h3>
         <p>{date}</p>
         <div className="link">
-          <Link to="./movies-detail/prueba">Más...</Link>
+          <Link to={`./movies-detail/${id}`}>Más...</Link>
         </div>
       </div>
     </div>
