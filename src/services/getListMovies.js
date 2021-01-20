@@ -1,8 +1,8 @@
 import { apiKey, urlApi } from "../constants/constants"
 
-export const getListMovies = async() => {
+export const getListMovies = async(page) => {
     const resource = 'search/movie';
-    const response = await fetch(`${urlApi}/${resource}?query=1&api_key=${apiKey}`);
+    const response = await fetch(`${urlApi}/${resource}?page=${page}&query=1&api_key=${apiKey}`);
     const { results } =  await response.json();
 
     const movies = results.map(movie => {
