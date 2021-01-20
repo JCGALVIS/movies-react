@@ -1,0 +1,30 @@
+@import '../../theme/variables.scss';
+
+.card {
+  flex: 0 1 calc(20% - 2rem);
+  border: 1px solid #d9d9d9;
+  margin-bottom: 1rem;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+
+  .image {
+    height: calc(160px * 2);
+    width: 100%;
+    overflow: hidden;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .info {
+    padding: 0.4rem;
+
+    h3 {
+        font-size: 16px;
+        color: $secundary;
+        font-weight: 400;
+    }
+  }
+}

@@ -1,7 +1,6 @@
 @import "../../theme/variables.scss";
 
 header {
-  position: fixed;
   width: 100%;
   min-height: 70px;
   border-bottom: 1px solid rgba(120, 130, 140, 0.13);
@@ -9,6 +8,8 @@ header {
   align-items: center;
   justify-content: left;
   padding-left: 2rem;
+  background: #f6f9fa;
+  position: fixed;
 
   h1 {
     font-size: 26px;
