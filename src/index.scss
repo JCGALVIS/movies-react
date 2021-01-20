@@ -7,15 +7,22 @@
   font-weight: 300;
   font-size: 14px;
 
-  h1, h3 {
+  h1,
+  h3 {
     line-height: 30px;
     font-size: 21px;
+  }
+
+  a {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
   }
 
   .movies-content {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin: 0 auto;
     padding: 2rem;
     margin-top: 70px;
