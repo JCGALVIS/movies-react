@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Home } from "./views/Home/Home";
+import { MoviesApp } from './MoviesApp';
 
-const divRoot = document.querySelector('#root');
+const divRoot = document.querySelector("#root");
 
-ReactDOM.render(<Home />, divRoot);
+ReactDOM.render(<MoviesApp />, divRoot);
