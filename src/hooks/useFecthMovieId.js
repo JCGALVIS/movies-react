@@ -1,21 +1,21 @@
 import { useState, useEffect } from "react";
-import { getListMovies } from "../services/getListMovies";
+import { getMovieId } from "../services/getMovieId";
 
-export const useFetchMoviesList = () => {
+export const useFecthMovieId = (movieId) => {
   const [state, setState] = useState({
     data: [],
     loading: true,
   });
 
   useEffect(() => {
-    getListMovies()
+    getMovieId(movieId)
     .then((movie) => {
       setState({
         data: movie,
         loading: false,
       });
     });
-  }, []);
+  }, [movieId]);
 
   return state;
 };
