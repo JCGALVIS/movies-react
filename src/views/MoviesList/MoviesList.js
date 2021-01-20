@@ -1,19 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 
-import { Card } from "../../components/Card/Card";
-import { useFetchMoviesList } from "../../hooks/useFetchMoviesList";
+import { CardMovies } from "../../components/CardMovies/CardMovies";
+import { InfiniteScroll } from "../../components/InfiniteScroll/InfiniteScroll";
+import { useWindowSize } from "../../hooks/useWindowSize";
 
 export const MoviesList = () => {
-  const { data: movies } = useFetchMoviesList();
+  const { height } = useWindowSize();
+  const [stateInfinitiScroll, setStateInfinitiScroll] = useState(false);
+  const page = 1;
 
   return (
     <>
-      {movies.map((movie) => (
-        <Card 
-          key={movie.id} 
-          {...movie} 
-        />
-      ))}
+      <CardMovies page={stateInfinitiScroll ? page + 1: null} />
+      <InfiniteScroll
+        height={height}
+        setStateInfinitiScroll={setStateInfinitiScroll}
+      />
     </>
   );
 };
