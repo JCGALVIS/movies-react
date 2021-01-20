@@ -1,5 +1,6 @@
 import React from 'react';
+import { Header } from './components/Header/Header';
 
 export const MoviesApp = () => {
-    return <h1>Hola Juan</h1>
+    return <Header />
 }
