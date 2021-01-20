@@ -7,9 +7,16 @@
   font-weight: 300;
   font-size: 14px;
 
-  h1, h3 {
+  h1,
+  h3 {
     line-height: 30px;
     font-size: 21px;
+  }
+
+  a {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
   }
 
   .movies-content {

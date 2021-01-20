@@ -1,4 +1,4 @@
-@import '../../theme/variables.scss';
+@import "../../theme/variables.scss";
 
 .card {
   flex: 0 1 calc(20% - 2rem);
@@ -22,9 +22,13 @@
     padding: 0.4rem;
 
     h3 {
-        font-size: 16px;
-        color: $secundary;
-        font-weight: 400;
+      font-size: 16px;
+      color: $secundary;
+      font-weight: 400;
+    }
+
+    .link {
+      text-align: right;
     }
   }
 }
