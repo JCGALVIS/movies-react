@@ -1,60 +1,16 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
 
-import { Card } from '../../components/Card/Card';
+import { Card } from "../../components/Card/Card";
+import { useFetchMoviesList } from "../../hooks/useFetchMoviesList";
 
 export const MoviesList = () => {
+  const { data: movies } = useFetchMoviesList();
+
   return (
     <>
-      <Card
-        image="https://www.themoviedb.org/t/p/w440_and_h660_face/8bkJiI6N8wDxAtQ49bLUt0qCBII.jpg"
-        title="Prueba de Juan Carlos Galvis"
-        year={2019}
-      />
-      <Card
-        image="https://www.themoviedb.org/t/p/w440_and_h660_face/8bkJiI6N8wDxAtQ49bLUt0qCBII.jpg"
-        title="Prueba de Juan Carlos Galvis"
-        year={2019}
-      />
-      <Card
-        image="https://www.themoviedb.org/t/p/w440_and_h660_face/8bkJiI6N8wDxAtQ49bLUt0qCBII.jpg"
-        title="Prueba de Juan Carlos Galvis"
-        year={2019}
-      />
-      <Card
-        image="https://www.themoviedb.org/t/p/w440_and_h660_face/8bkJiI6N8wDxAtQ49bLUt0qCBII.jpg"
-        title="Prueba de Juan Carlos Galvis"
-        year={2019}
-      />
-      <Card
-        image="https://www.themoviedb.org/t/p/w440_and_h660_face/8bkJiI6N8wDxAtQ49bLUt0qCBII.jpg"
-        title="Prueba de Juan Carlos Galvis"
-        year={2019}
-      />
-      <Card
-        image="https://www.themoviedb.org/t/p/w440_and_h660_face/8bkJiI6N8wDxAtQ49bLUt0qCBII.jpg"
-        title="Prueba de Juan Carlos Galvis"
-        year={2019}
-      />
-      <Card
-        image="https://www.themoviedb.org/t/p/w440_and_h660_face/8bkJiI6N8wDxAtQ49bLUt0qCBII.jpg"
-        title="Prueba de Juan Carlos Galvis"
-        year={2019}
-      />
-      <Card
-        image="https://www.themoviedb.org/t/p/w440_and_h660_face/8bkJiI6N8wDxAtQ49bLUt0qCBII.jpg"
-        title="Prueba de Juan Carlos Galvis"
-        year={2019}
-      />
-      <Card
-        image="https://www.themoviedb.org/t/p/w440_and_h660_face/8bkJiI6N8wDxAtQ49bLUt0qCBII.jpg"
-        title="Prueba de Juan Carlos Galvis"
-        year={2019}
-      />
-      <Card
-        image="https://www.themoviedb.org/t/p/w440_and_h660_face/8bkJiI6N8wDxAtQ49bLUt0qCBII.jpg"
-        title="Prueba de Juan Carlos Galvis"
-        year={2019}
-      />
+      {movies.map((movie) => (
+        <Card key={movie.id} {...movie} />
+      ))}
     </>
   );
 };
