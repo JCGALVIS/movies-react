@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 
 import { useFecthMovieId } from "../../hooks/useFecthMovieId";
 import { urlImage } from "../../constants/constants";
+import { CardAuthor } from "../../components/CardAuthor/CardAuthor";
+
 import "./moviesDetails.scss";
 
 export const MoviesDetails = ({ history }) => {
@@ -21,7 +23,7 @@ export const MoviesDetails = ({ history }) => {
 
   return (
     <div className="movies-detail">
-      <div className="image">
+      <div className="image-content">
         <img src={movie.image ? `${urlImage}${movie.image}` : ''} alt={movie.title} />
       </div>
       <div className="info">
@@ -42,6 +44,9 @@ export const MoviesDetails = ({ history }) => {
           onClick={handleReturn}>
           Return
         </button>
+        <div className="authors">
+          <CardAuthor movieId={movieId} />
+        </div>
       </div>
     </div>
   );

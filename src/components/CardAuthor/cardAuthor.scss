@@ -1,0 +1,23 @@
+.card-author-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  .card {
+    flex: 0 1 calc(20% - 3rem);
+
+    .image {
+      height: calc(50px * 3);
+    }
+  }
+
+  .info {
+    h3 {
+      font-size: 11px;
+      line-height: 1;
+    }
+
+    .link {
+      display: none;
+    }
+  }
+}
